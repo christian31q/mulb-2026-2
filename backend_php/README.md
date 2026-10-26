@@ -19,8 +19,16 @@ contraseña en el repositorio:
 La conexión requiere TLS (`sslmode=require`) y la extensión PDO PostgreSQL.
 La imagen Docker del backend instala `pdo_pgsql`.
 
+## Despliegue en Render
+
+Crea un servicio **Web Service** usando Docker y configura `backend_php` como
+**Root Directory**, de modo que Render encuentre este Dockerfile y use esa
+carpeta como contexto de compilación. Render asigna `PORT` automáticamente; la
+imagen escucha en `0.0.0.0` y usa `10000` como valor predeterminado local.
+Agrega `SUPABASE_DB_PASSWORD` en las variables de entorno del servicio.
+
 ## Endpoint
 
-`GET /backend_php/api/paseadores.php` devuelve los paseadores. La página debe
-servirse desde un servidor web con PHP; abrir `index.html` directamente como
-archivo no ejecuta el endpoint.
+`GET /api/paseadores.php` devuelve los paseadores. La página debe servirse
+desde un servidor web con PHP; abrir `index.html` directamente como archivo no
+ejecuta el endpoint.
