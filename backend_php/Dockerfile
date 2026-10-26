@@ -3,6 +3,7 @@ FROM php:8.2-cli
 RUN apt-get update \
   && apt-get install -y --no-install-recommends libpq-dev \
   && docker-php-ext-install mysqli pdo_pgsql \
+  && apt-mark manual libpq5 \
   && apt-get purge -y --auto-remove libpq-dev \
   && rm -rf /var/lib/apt/lists/*
 

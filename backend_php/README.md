@@ -16,6 +16,11 @@ contraseña en el repositorio:
 | `SUPABASE_DB_USER` | `postgres` |
 | `SUPABASE_DB_PASSWORD` | Contraseña de la base de datos del proyecto Supabase |
 
+Para desarrollo local, completa `backend_php/.env`; PHP lo carga
+automáticamente. Escribe el valor de la contraseña entre comillas dobles si
+contiene caracteres especiales. El archivo está excluido de Git y Docker. En
+Render, define las variables en la configuración del servicio.
+
 La conexión requiere TLS (`sslmode=require`) y la extensión PDO PostgreSQL.
 La imagen Docker del backend instala `pdo_pgsql`.
 

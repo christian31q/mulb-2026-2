@@ -1,5 +1,24 @@
 <?php
 
+$environmentFile = __DIR__ . '/../.env';
+
+if (is_file($environmentFile)) {
+  $environment = parse_ini_file($environmentFile, false, INI_SCANNER_RAW);
+
+  if ($environment === false) {
+    http_response_code(500);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['error' => 'No se pudo leer el archivo de configuración.']);
+    exit;
+  }
+
+  foreach ($environment as $name => $value) {
+    if (getenv($name) === false) {
+      putenv("$name=$value");
+    }
+  }
+}
+
 $databasePassword = getenv('SUPABASE_DB_PASSWORD');
 
 if (!$databasePassword) {
