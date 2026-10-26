@@ -10,11 +10,14 @@ contraseña en el repositorio:
 
 | Variable | Valor |
 | --- | --- |
-| `SUPABASE_DB_HOST` | `db.xuzfixguuqepfllakeng.supabase.co` |
+| `SUPABASE_DB_HOST` | `aws-1-us-east-2.pooler.supabase.com` |
 | `SUPABASE_DB_PORT` | `5432` |
 | `SUPABASE_DB_NAME` | `postgres` |
-| `SUPABASE_DB_USER` | `postgres` |
+| `SUPABASE_DB_USER` | `postgres.xuzfixguuqepfllakeng` |
 | `SUPABASE_DB_PASSWORD` | Contraseña de la base de datos del proyecto Supabase |
+
+Se usa el pooler de sesión de Supabase porque el host directo
+(`db.<ref>.supabase.co`) solo admite IPv6 y falla en Render y en muchas redes.
 
 Para desarrollo local, completa `backend_php/.env`; PHP lo carga
 automáticamente. Escribe el valor de la contraseña entre comillas dobles si

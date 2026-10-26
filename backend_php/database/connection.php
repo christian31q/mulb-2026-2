@@ -29,10 +29,10 @@ if (!$databasePassword) {
 }
 
 try {
-  $host = getenv('SUPABASE_DB_HOST') ?: 'db.xuzfixguuqepfllakeng.supabase.co';
+  $host = getenv('SUPABASE_DB_HOST') ?: 'aws-1-us-east-2.pooler.supabase.com';
   $port = getenv('SUPABASE_DB_PORT') ?: '5432';
   $database = getenv('SUPABASE_DB_NAME') ?: 'postgres';
-  $user = getenv('SUPABASE_DB_USER') ?: 'postgres';
+  $user = getenv('SUPABASE_DB_USER')   ?: 'postgres.xuzfixguuqepfllakeng';
   $dsn = "pgsql:host=$host;port=$port;dbname=$database;sslmode=require";
 
   $conn = new PDO($dsn, $user, $databasePassword, [
