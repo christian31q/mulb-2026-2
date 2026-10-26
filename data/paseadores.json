@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Paseos PetGo",
+    "status": "Disponible",
+    "rating": 4.9,
+    "reviewCount": 128,
+    "location": "Chapinero",
+    "description": "Paseos profesionales con seguimiento GPS en tiempo real.",
+    "price": "$20.000",
+    "duration": "30 min"
+  },
+  {
+    "name": "Happy Walk",
+    "status": "Disponible",
+    "rating": 4.8,
+    "reviewCount": 96,
+    "location": "Usaquén",
+    "description": "Paseos personalizados con seguimiento durante el servicio.",
+    "price": "$18.000",
+    "duration": "30 min"
+  },
+  {
+    "name": "Patitas Felices",
+    "status": "Disponible",
+    "rating": 4.7,
+    "reviewCount": 74,
+    "location": "Suba",
+    "description": "Paseos grupales e individuales con cuidadores certificados.",
+    "price": "$22.000",
+    "duration": "45 min"
+  }
+  ,
+  {
+    "name": "Otra cosa",
+    "status": "No Disponible",
+    "rating": 1.0,
+    "reviewCount": 100,
+    "location": "Suba",
+    "description": "no paseamos perros",
+    "price": "$1.000",
+    "duration": "5 min"
+  }
+]
